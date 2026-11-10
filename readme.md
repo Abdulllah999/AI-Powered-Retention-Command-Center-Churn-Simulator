@@ -1,3 +1,5 @@
+[Explore Abdullah Shakeel’s data science & AI portfolio →](PORTFOLIO.md)
+
 # Retention Command Center & Churn Simulator
 
 An interactive **synthetic risk-score simulator**, built with Python, Streamlit, Scikit-learn and Plotly. This update preserves the original dashboard and corrects its probability and unsupported growth claims.
