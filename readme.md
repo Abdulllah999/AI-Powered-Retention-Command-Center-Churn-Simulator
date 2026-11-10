@@ -1,3 +1,5 @@
+[Complete project source downloads and automatic publication →](COMPLETE-PROJECT-DOWNLOADS.md)
+
 [Explore Abdullah Shakeel’s data science & AI portfolio →](PORTFOLIO.md)
 
 # Retention Command Center & Churn Simulator

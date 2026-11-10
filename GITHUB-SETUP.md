@@ -1,3 +1,5 @@
+**Updated:** CLI authorization was granted, but effective API requests remain restricted in this workspace. See [complete downloads and automatic local publication](COMPLETE-PROJECT-DOWNLOADS.md) for the current resolution.
+
 # Finish the GitHub profile setup
 
 The connected integration can push code and manage pull requests, but GitHub denied repository creation, repository descriptions/topics and profile settings with HTTP 403 / “Resource not accessible by integration”. No account permission was changed.
