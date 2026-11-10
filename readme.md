@@ -1,33 +1,50 @@
-# ⚡ AI-Powered Retention Command Center & Churn Simulator
+# Retention Command Center & Churn Simulator
 
-An eye-catching, high-performance data science dashboard built with Python and Streamlit. This application trains a Machine Learning model under the hood and allows users to simulate hypothetical customer behaviors to predict churn risk in real-time.
+An interactive **synthetic risk-score simulator**, built with Python, Streamlit, Scikit-learn and Plotly. This update preserves the original dashboard and corrects its probability and unsupported growth claims.
 
-![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
-![Streamlit](https://img.shields.io/badge/Streamlit-Framework-FF4B4B.svg)
-![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML--Engine-F7931E.svg)
-![Vercel](https://img.shields.io/badge/Deploy-Vercel-000000.svg)
+![Actual local dashboard](artifacts/demo.png)
 
----
+## Problem and users
 
-## 🎯 Project Overview
+Explore how an invented customer-risk rule changes with engagement and support-ticket inputs. Intended for recruiters and developers inspecting a small ML dashboard, not for real retention decisions.
 
-Bridging the gap between complex machine learning pipelines and functional corporate strategy, this **Retention Command Center** serves as a dual-purpose analytical playground. 
+## Features and architecture
 
-Instead of dealing with static plots, business managers can interactively tweak customer behaviors (e.g., support tickets filed, app engagement scores) via sidebar controllers. The app passes these inputs to a pre-trained machine learning model and returns an instantaneous, live prediction via a high-contrast visual interface.
+300 seeded fictional customers → fixed 240/60 train/test split → random forest regressor → interactive scenario controls, cohort plots and held-out evaluation.
 
-### Key Architecture Features
-* **Machine Learning Pipeline:** Trains a `RandomForestRegressor` to map correlation vectors between account engagement matrices and user churn probabilities.
-* **Aggressive UI Caching:** Utilizes Streamlit's `@st.cache_resource` mechanics to keep predictive latency down to zero milliseconds during user slider updates.
-* **Premium Glassmorphism UX:** Designed with custom inline HTML/CSS gradient injection, fluid typography, and high-contrast Plotly graphics.
-* **Automated Logic Insights:** An rule-based text engine triggers immediate color-coded strategic response action items depending on risk probability levels.
+The target is `clip(100 - engagement + 7.5 * support_tickets, 0, 100)`, rounded to one decimal. It is a score, **not an observed churn label or calibrated probability**. Monthly spend and tenure are unrelated distractor features in the generator. An exact formula baseline scores zero MAE by construction and is more appropriate than ML when the formula is known. Feature importance does not establish causality; changing sliders does not measure intervention impact.
 
----
+## Setup and usage
 
-## ⚙️ Repository File Structure
+Requires Python 3.12:
 
-To deploy seamlessly, ensure your GitHub repository contains the following files in its root directory:
+```bash
+python -m venv .venv
+. .venv/bin/activate
+pip install -r requirements.txt
+streamlit run myfile.py --browser.gatherUsageStats=false
+```
 
-```text
-├── app.py                  # Core Streamlit application code
-├── requirements.txt        # Python dependency specifications
-└── README.md               # Project documentation (this file)
+Open http://localhost:8501. Use cohort filters and fictional customer sliders. The real entry point is `myfile.py`; no `app.py` or Vercel deployment is implied. No secrets or external data are required.
+
+## Validation and evaluation
+
+```bash
+pip install -r requirements-dev.txt
+python -m pytest -q
+python evaluate.py
+```
+
+Tests cover seeded data, bounded scores, the exact-formula baseline, mean-baseline comparison, application startup and empty cohort filters. See `artifacts/evaluation.json` for measured MAE/R² and baselines, and `artifacts/demo.png` for the actual running dashboard. CI is prepared but has not run on GitHub before publication. No latency measurement is claimed.
+
+## Data, ownership and limitations
+
+All rows are synthetic; no employer, billing or real customer data is used. The original public code had no license; see LICENSE-REVIEW.md before applying one. New changes are prepared for the repository owner. No historical activity, real churn accuracy, revenue growth, business impact or deployment is established.
+
+## Future improvements
+
+Collect a legally usable observed-churn dataset, define a prediction date and horizon, remove post-outcome leakage, use chronological/customer-separated evaluation, assess calibration and subgroup errors, and compare a simple classifier before adding complexity. A SQL reporting exercise can demonstrate analyst skills once the underlying data is credible.
+
+## Application summary
+
+Improved a Streamlit synthetic risk simulator by extracting reproducible model logic, evaluating held-out error against mean and exact-formula baselines, and adding validation for empty filters.

@@ -27,63 +27,20 @@ st.markdown("""
 # ==========================================
 # 2. DATA GENERATION PIPELINE
 # ==========================================
+from retention import generate_customer_data as generate_data, fit_model
 @st.cache_data
 def generate_customer_data():
-    np.random.seed(42)
-    n_customers = 300
-    
-    segments = ['Champions', 'Loyalists', 'At Risk', 'Hibernating']
-    weights = [0.30, 0.40, 0.20, 0.10]
-    
-    data = {
-        'CustomerID': [f"CU-{i:04d}" for i in range(1001, 1001 + n_customers)],
-        'Segment': np.random.choice(segments, size=n_customers, p=weights),
-        'Monthly_Spend': np.random.uniform(50, 800, size=n_customers).round(2),
-        'Tenure_Months': np.random.randint(2, 60, size=n_customers),
-        'Support_Tickets': np.random.randint(0, 10, size=n_customers),
-        'Engagement_Score': np.random.uniform(15, 100, size=n_customers).round(1)
-    }
-    
-    df = pd.DataFrame(data)
-    # Define an algorithmic ground-truth target for Churn Risk
-    df['Churn_Risk'] = (100 - df['Engagement_Score'] + (df['Support_Tickets'] * 7.5)).clip(0, 100).round(1)
-    return df
-
-df = generate_customer_data()
-
-# ==========================================
-# 3. MACHINE LEARNING ENGINE
-# ==========================================
+    return generate_data()
 @st.cache_resource
 def train_retention_model(data):
-    # Features (X) must be purely numeric for the model
-    X = data[['Monthly_Spend', 'Tenure_Months', 'Support_Tickets', 'Engagement_Score']]
-    y = data['Churn_Risk']
-    
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-    
-    # Train the Random Forest Regressor
-    model = RandomForestRegressor(n_estimators=100, random_state=42, n_jobs=-1)
-    model.fit(X_train, y_train)
-    
-    # Extract Feature Importances
-    importances = model.feature_importances_
-    feat_imp_df = pd.DataFrame({
-        'Feature': X.columns,
-        'Importance': importances
-    }).sort_values(by='Importance', ascending=False)
-    
-    # Return statistical bounds for the inputs
-    stats = {
-        'means': X.mean().to_dict(),
-        'mins': X.min().to_dict(),
-        'maxs': X.max().to_dict()
-    }
-    
-    return model, feat_imp_df, stats
+    return fit_model(data)
+df = generate_customer_data()
 
 with st.spinner("🤖 Training predictive risk model..."):
-    model, feat_imp, data_stats = train_retention_model(df)
+    model, feat_imp, data_stats, evaluation = train_retention_model(df)
+st.info("Synthetic educational simulator: the score approximates an invented formula, not a measured churn probability. No real customers or measured revenue growth.")
+with st.expander("Held-out evaluation and baseline"):
+    st.json(evaluation)
 
 # ==========================================
 # 4. SIDEBAR CONTROL & SIMULATOR
@@ -129,11 +86,11 @@ filtered_df = df[df['Segment'].isin(selected_segments)]
 # ==========================================
 m1, m2, m3, m4 = st.columns(4)
 with m1:
-    st.metric(label="Total Portfolio Revenue", value=f"${filtered_df['Monthly_Spend'].sum():,.0f}", delta="+14.2% MoM")
+    st.metric(label="Synthetic Monthly Spend", value=f"${filtered_df['Monthly_Spend'].sum():,.0f}")
 with m2:
-    st.metric(label="Avg Account Longevity", value=f"{filtered_df['Tenure_Months'].mean():.1f} Months")
+    st.metric(label="Avg Account Longevity", value=f"{filtered_df['Tenure_Months'].mean():.1f} Months" if len(filtered_df) else "No data")
 with m3:
-    st.metric(label="Mean Engagement Rating", value=f"{filtered_df['Engagement_Score'].mean():.1f} / 100")
+    st.metric(label="Mean Engagement Rating", value=f"{filtered_df['Engagement_Score'].mean():.1f} / 100" if len(filtered_df) else "No data")
 with m4:
     critical_churn_count = len(filtered_df[filtered_df['Churn_Risk'] > 75])
     st.metric(label="High Risk Anomalies", value=critical_churn_count, delta=f"{critical_churn_count/len(df)*100:.1f}% base", delta_color="inverse")
@@ -176,7 +133,7 @@ with col2:
         mode="gauge+number",
         value=predicted_churn,
         domain={'x': [0, 1], 'y': [0, 1]},
-        title={'text': "Predicted Churn Probability (%)", 'font': {'size': 16}},
+        title={'text': "Synthetic Risk Score (0–100)", 'font': {'size': 16}},
         gauge={
             'axis': {'range': [0, 100]},
             'bar': {'color': "#ef4444" if predicted_churn > 60 else "#3b82f6"},
@@ -216,12 +173,12 @@ with infra_left:
     st.plotly_chart(fig_imp, use_container_width=True)
 
 with infra_right:
-    st.markdown("### 💡 Actionable Strategic Directive")
+    st.markdown("### 💡 Illustrative Scenario Note")
     
     # Dynamic insight text generation based on the ML prediction outcome
     if predicted_churn > 70:
-        st.error(f"🚨 **High Alert Alert:** Simulated parameters generate a **{predicted_churn:.1f}%** churn probability. The custom account exhibits high risk markers. Immediately dispatch a client success manager.")
+        st.error(f"🚨 **High synthetic score:** Simulated parameters generate a **{predicted_churn:.1f}/100** synthetic risk score. The custom account exhibits high risk markers. Review this fictional scenario; no intervention effect is estimated.")
     elif predicted_churn > 40:
-        st.warning(f"⚠️ **Precautionary Watch:** Simulated parameters yield a **{predicted_churn:.1f}%** risk factor. Recommend monitoring support volumes over the next 14 business days.")
+        st.warning(f"⚠️ **Precautionary Watch:** Simulated parameters yield a **{predicted_churn:.1f}/100** risk factor. The thresholds are illustrative and have not been validated for business decisions.")
     else:
-        st.success(f"✅ **Account Stable:** Churn forecast is minimal (**{predicted_churn:.1f}%**). This behavior profile sits well within the healthy portfolio benchmark metrics.")
+        st.success(f"✅ **Account Stable:** Synthetic score is low (**{predicted_churn:.1f}/100**). This behavior profile sits well within the low-score region of the invented formula.")

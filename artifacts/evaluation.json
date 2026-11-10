@@ -1,0 +1,7 @@
+{
+  "method": "Fixed random 240/60 split, seed 42. Synthetic formula approximation, not churn probability estimation.",
+  "mae": 1.6646500000000055,
+  "r2": 0.9913240543267958,
+  "mean_baseline_mae": 24.21334722222222,
+  "formula_baseline_mae": 0.0
+}
