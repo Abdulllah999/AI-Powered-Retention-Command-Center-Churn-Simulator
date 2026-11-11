@@ -1,6 +1,6 @@
 # Abdullah Shakeel · Data Science & AI
 
-The maintained portfolio front page is [my GitHub profile](https://github.com/Abdulllah999).
+The maintained portfolio front page is [my GitHub profile](https://github.com/Abdulllah999). Recruiter contact: [LinkedIn](https://www.linkedin.com/in/abdullah-shakeel-26aabb265/).
 
 ## Start with the evidence
 

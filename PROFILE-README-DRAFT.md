@@ -13,7 +13,7 @@ From raw data to models you can inspect and applications you can use.
   <img src="https://raw.githubusercontent.com/Abdulllah999/Abdulllah999/main/assets/flask.svg" alt="Flask" width="77" height="30" />
 </p>
 
-[Selected projects](#selected-projects) &nbsp; / &nbsp; [Technical toolkit](#technical-toolkit) &nbsp; / &nbsp; [Background](#background)
+[Selected projects](#selected-projects) &nbsp; / &nbsp; [Technical toolkit](#technical-toolkit) &nbsp; / &nbsp; [Background](#background) &nbsp; / &nbsp; [LinkedIn](https://www.linkedin.com/in/abdullah-shakeel-26aabb265/)
 
 </div>
 
@@ -75,4 +75,4 @@ Seeking **Data Science, Machine Learning and AI** opportunities where I can cont
 
 The lab projects are current portfolio implementations inspired by earlier project ideas. Data provenance, methodology and scope are documented in each repository; no deployment or real-world business outcome is claimed.
 
-[Explore all repositories →](https://github.com/Abdulllah999?tab=repositories)
+[Connect on LinkedIn](https://www.linkedin.com/in/abdullah-shakeel-26aabb265/) · [Explore all repositories](https://github.com/Abdulllah999?tab=repositories)
