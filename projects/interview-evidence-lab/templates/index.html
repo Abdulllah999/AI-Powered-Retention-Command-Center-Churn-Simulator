@@ -1,0 +1,4 @@
+{% extends "base.html" %}{% block form %}
+<label for="resume">Fictional resume text</label><textarea id="resume" name="resume" rows="5" maxlength="20000" required>{{ resume }}</textarea>
+<label for="job">Job requirements</label><textarea id="job" name="job" rows="3" maxlength="20000" required>{{ job }}</textarea>
+<p class="muted">Supported vocabulary: Python, SQL, Flask, React, Docker, Pandas, TensorFlow, Excel.</p>{% endblock %}

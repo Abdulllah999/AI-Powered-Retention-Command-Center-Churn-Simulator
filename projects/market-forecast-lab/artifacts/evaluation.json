@@ -1,0 +1,9 @@
+{
+  "method": "Expanding-window one-step-ahead evaluation on last 20%; fixed alpha 10, no test tuning; sentiment available by origin close.",
+  "train_first_fold": 283,
+  "test_origins": 71,
+  "ridge_mae": 0.9176542174289034,
+  "price_only_mae": 0.8869386101250953,
+  "persistence_mae": 0.7355635360965409,
+  "data": "Synthetic market, seed 19. No evidence of trading performance."
+}

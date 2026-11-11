@@ -1,0 +1,5 @@
+# Flutter companion source — not built or tested
+
+The Python web application and API are runnable. This companion is a source scaffold only; Flutter is not installed in the preparation environment. It is excluded from Python CI and not presented as a validated mobile release.
+
+In a Flutter-enabled environment, create platform scaffolding using `flutter create --platforms=android,ios .` in this directory, inspect the resulting pubspec for preservation of `http: 1.2.2`, then run `flutter pub get` and `flutter analyze`. Configure Android internet permission and development-only cleartext access for the emulator, or use a trusted HTTPS development endpoint. Production traffic must use HTTPS. For Android emulator API access, run the Flask server with `flask --app app run --host 0.0.0.0 --port 5003` on a trusted development machine. Do not expose it publicly. Run `flutter run --dart-define=API_BASE=http://10.0.2.2:5003`. For another platform, supply its reachable API URL. No medical or production validation is implied.

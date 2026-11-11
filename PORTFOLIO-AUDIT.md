@@ -32,3 +32,9 @@ Previously published main and all four portfolio branches have successful GitHub
 ## Career positioning
 
 See CAREER-NOTES.md for role-specific emphasis and application-ready summaries. Lead with evaluation for Data Scientist, serving/validation for ML Engineer, bounded text workflows for AI Engineer, Flask/module design for Python Developer, and dashboard/SQL reconciliation for Data Analyst. Employment and education details remain owner-reported; no CV achievement is treated as independently verified.
+
+## Default-branch publication follow-through
+
+All four labs are now copied from their preserved `portfolio/<name>` branch commits into `projects/<name>` on the default branch. The repository front page links directly to runnable source, screenshots and evaluations. Each application retains its provenance, dependency and licensing notes. Local pytest configuration isolates the applications, and the central GitHub Actions matrix runs each project from its own directory.
+
+All 31 Python tests and five evaluation commands passed again from the consolidated layout. Local Markdown link targets were checked with no missing paths. Repository creation, repository description/topics and profile bio/location updates were attempted again; each returned HTTP 403 “Resource not accessible by integration”. No settings update or separate repository creation is claimed. The five destination repositories did not exist at this check. Existing history and branches remain intact.

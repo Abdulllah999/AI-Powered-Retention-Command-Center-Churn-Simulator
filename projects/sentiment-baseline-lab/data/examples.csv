@@ -1,0 +1,34 @@
+text,label,split
+I love this helpful service,positive,train
+A wonderful experience today,positive,train
+Really good support and friendly staff,positive,train
+This product works great,positive,train
+Happy with the excellent result,positive,train
+Amazing quality and great value,positive,train
+I enjoyed the quick delivery,positive,train
+The update is fantastic,positive,train
+I hate this broken product,negative,train
+A terrible experience today,negative,train
+Really bad support and rude staff,negative,train
+This service is awful,negative,train
+Unhappy with the poor result,negative,train
+Disappointing quality and wasted money,negative,train
+The delivery is slow and frustrating,negative,train
+The update is horrible,negative,train
+The package arrived on Tuesday,neutral,train
+The product comes in two sizes,neutral,train
+I have a question about the service,neutral,train
+The store opens at nine,neutral,train
+This is the latest version,neutral,train
+There are three items in the box,neutral,train
+The meeting is scheduled tomorrow,neutral,train
+I received a message today,neutral,train
+Excellent service and good quality,positive,test
+I love the quick support,positive,test
+The result is wonderful,positive,test
+Terrible service and poor quality,negative,test
+I hate the slow delivery,negative,test
+The result is awful,negative,test
+The package contains three items,neutral,test
+The store has two sizes,neutral,test
+The message arrived on Tuesday,neutral,test

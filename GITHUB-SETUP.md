@@ -1,3 +1,5 @@
+> **Latest:** The complete Python portfolio is available in the default-branch `projects/` folders and linked from the repository front page. Consolidated validation: 31 tests plus five evaluation commands passed. Separate repositories/profile settings remain blocked by GitHub integration permissions. Historical validation notes below describe earlier checks.
+
 **Updated:** CLI authorization was granted, but effective API requests remain restricted in this workspace. See [complete downloads and automatic local publication](COMPLETE-PROJECT-DOWNLOADS.md) for the current resolution.
 
 # Finish the GitHub profile setup

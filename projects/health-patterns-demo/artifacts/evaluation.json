@@ -1,0 +1,28 @@
+{
+  "method": "600 artificial cases; fixed stratified 450/150 split. Duplicate binary patterns can cross splits; score measures synthetic generator recovery only, not clinical validity.",
+  "accuracy": 0.78,
+  "macro_f1": 0.7834870434728364,
+  "baseline_accuracy": 0.3333333333333333,
+  "labels": [
+    "Synthetic cold-like pattern",
+    "Synthetic flu-like pattern",
+    "Synthetic allergy-like pattern"
+  ],
+  "confusion_matrix": [
+    [
+      38,
+      5,
+      7
+    ],
+    [
+      8,
+      42,
+      0
+    ],
+    [
+      13,
+      0,
+      37
+    ]
+  ]
+}
