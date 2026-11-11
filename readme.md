@@ -39,7 +39,7 @@ python -m pytest -q
 python evaluate.py
 ```
 
-Tests cover seeded data, bounded scores, the exact-formula baseline, mean-baseline comparison, application startup and empty cohort filters. See `artifacts/evaluation.json` for measured MAE/R² and baselines, and `artifacts/demo.png` for the actual running dashboard. CI is prepared but has not run on GitHub before publication. No latency measurement is claimed.
+Tests cover seeded data, bounded scores, the exact-formula baseline, mean-baseline comparison, application startup and empty cohort filters. See `artifacts/evaluation.json` for measured MAE/R² and baselines, and `artifacts/demo.png` for the actual running dashboard. GitHub Actions has passed on the published main branch; see the repository Actions tab for the latest run. No latency measurement is claimed.
 
 ## Data, ownership and limitations
 
@@ -52,3 +52,7 @@ Collect a legally usable observed-churn dataset, define a prediction date and ho
 ## Application summary
 
 Improved a Streamlit synthetic risk simulator by extracting reproducible model logic, evaluating held-out error against mean and exact-formula baselines, and adding validation for empty filters.
+
+## SQL reporting
+
+[SQL cohort analysis](analytics/README.md) adds a CTE, conditional aggregation and window-based cohort shares over the same synthetic snapshot. Run `python report.py`; this is a reproducible SQL example, with no observed churn or revenue claims.
