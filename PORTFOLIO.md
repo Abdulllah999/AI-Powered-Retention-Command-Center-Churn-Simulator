@@ -1,6 +1,6 @@
 # Abdullah Shakeel
 
-> All five Python applications are available from the default branch of this repository. Each lab has its own setup, tests, screenshots and evaluation output. Separate project repositories and the special profile repository remain pending GitHub account permissions.
+> All four labs are published in separate public repositories and featured on [my GitHub profile](https://github.com/Abdulllah999). Each has setup instructions, tests, screenshots and evaluation output. The retention dashboard and SQL report remain in this repository.
 
 ### Data science & AI · Python applications · Clear, reproducible analysis
 
@@ -14,10 +14,10 @@ My portfolio connects **data → models → usable applications**, with visible 
 
 | Project | What to inspect | Stack |
 | --- | --- | --- |
-| [Interview Evidence Lab](projects/interview-evidence-lab) | Explicit skill evidence and human interview prompts; no automated hiring decisions | Python · Flask · text processing |
-| [Sentiment Baseline Lab](projects/sentiment-baseline-lab) | Train-only TF-IDF pipeline, three-class baseline and unknown-vocabulary abstention | Python · Scikit-learn · Pandas |
-| [Market Forecast Lab](projects/market-forecast-lab) | Walk-forward evaluation, sentiment ablation and persistence baseline | Python · Flask · time series |
-| [Health Pattern Explorer](projects/health-patterns-demo) | Synthetic classification, validated API and educational limits; Flutter companion source | Python · Flask · Scikit-learn · Flutter scaffold |
+| [Interview Evidence Lab](https://github.com/Abdulllah999/interview-evidence-lab) | Explicit skill evidence and human interview prompts; no automated hiring decisions | Python · Flask · text processing |
+| [Sentiment Baseline Lab](https://github.com/Abdulllah999/sentiment-baseline-lab) | Train-only TF-IDF pipeline, three-class baseline and unknown-vocabulary abstention | Python · Scikit-learn · Pandas |
+| [Market Forecast Lab](https://github.com/Abdulllah999/market-forecast-lab) | Walk-forward evaluation, sentiment ablation and persistence baseline | Python · Flask · time series |
+| [Health Pattern Explorer](https://github.com/Abdulllah999/health-patterns-demo) | Synthetic classification, validated API and educational limits; Flutter companion source | Python · Flask · Scikit-learn · Flutter scaffold |
 | [Retention Command Center](https://github.com/Abdulllah999/AI-Powered-Retention-Command-Center-Churn-Simulator) | Interactive synthetic scenarios and an explicit formula baseline | Streamlit · Plotly · Scikit-learn |
 
 The four lab projects are **new portfolio implementations prepared in November 2026**, inspired by ideas described in my CV. They are not the original university applications. Synthetic and authored fixtures demonstrate software behavior; they do not establish real-world hiring, healthcare, financial or customer outcomes. Each repository documents its scope, actual local output and evaluation method.
@@ -27,11 +27,11 @@ The four lab projects are **new portfolio implementations prepared in November 2
 
 **Interview Evidence Lab**
 
-![Interview evidence demo](projects/interview-evidence-lab/artifacts/demo.png)
+![Interview evidence demo](https://raw.githubusercontent.com/Abdulllah999/interview-evidence-lab/main/artifacts/demo.png)
 
 **Market Forecast Lab**
 
-![Forecasting demo](projects/market-forecast-lab/artifacts/demo.png)
+![Forecasting demo](https://raw.githubusercontent.com/Abdulllah999/market-forecast-lab/main/artifacts/demo.png)
 
 </details>
 
