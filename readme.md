@@ -1,74 +1,81 @@
-# Abdullah Shakeel · Data science & AI portfolio
+# Retention scenarios and SQL cohort analysis
 
-I build Python applications that connect data, models and usable interfaces, with reproducible examples and explicit evaluation limits. Based in Islamabad, Pakistan; BS Information Technology, Bahria University (2021–2025), with a focus on Data Science and AI.
+An interactive Streamlit dashboard for exploring synthetic customer-risk scenarios, paired with a SQLite reporting exercise. The strongest evidence here is the transparent baseline comparison and reconciliation of report totals.
 
-[Profile, experience and skills](PORTFOLIO.md) · [Application summaries by role](CAREER-NOTES.md) · [Audit and validation](PORTFOLIO-AUDIT.md)
+**Python · Streamlit · Pandas · Scikit-learn · Plotly · SQLite**
 
-| Project | Evidence to inspect | Start here |
-| --- | --- | --- |
-| Interview Evidence Lab | Deterministic skill matching, human review, Flask validation | [Code and demo](https://github.com/Abdulllah999/interview-evidence-lab) |
-| Sentiment Baseline Lab | Train-only TF-IDF, three classes, authored holdout and abstention | [Code and evaluation](https://github.com/Abdulllah999/sentiment-baseline-lab) |
-| Market Forecast Lab | Chronological evaluation, sentiment ablation, persistence baseline | [Code and evaluation](https://github.com/Abdulllah999/market-forecast-lab) |
-| Health Pattern Explorer | Synthetic model-serving API, educational limits, Flutter companion source | [Code and demo](https://github.com/Abdulllah999/health-patterns-demo) |
-| Retention Command Center | Streamlit scenarios, exact-formula baseline and SQL reconciliation | [Dashboard details below](#retention-command-center--churn-simulator) · [SQL report](analytics/README.md) |
+[SQL query](analytics/cohorts.sql) · [Report output](artifacts/cohort-report.csv) · [Model evaluation](artifacts/evaluation.json) · [Tests](test_app.py)
 
-The four labs are new portfolio implementations inspired by CV project ideas, not recovered university applications. Each project is independently runnable: open its repository README, clone it, then install its requirements. Evaluation data is authored or synthetic; the results do not establish real-world outcomes. Flutter and Docker builds are not validated. No application deployment is claimed.
+## Why a baseline matters
 
-All four labs are published in separate repositories and featured on [my profile](https://github.com/Abdulllah999). GitHub Actions validates the Python applications. Original branches and default-branch project snapshots are preserved; use the linked individual repositories for current project work. [Profile settings and recommended pins](GITHUB-SETUP.md).
+The 300 fictional customers receive a score from a known rule:
 
----
+```text
+clip(100 - engagement + 7.5 × support tickets, 0, 100), rounded to one decimal
+```
 
-# Retention Command Center & Churn Simulator
+| Method | Held-out MAE, synthetic score points |
+| --- | ---: |
+| Exact generating formula | **0.0000** |
+| Random forest | 1.6647 |
+| Training-mean baseline | 24.2133 |
 
-An interactive **synthetic risk-score simulator**, built with Python, Streamlit, Scikit-learn and Plotly. This update preserves the original dashboard and corrects its probability and unsupported growth claims.
+The fixed seed-42 split contains 240 training and 60 test rows. The forest approximates a known rule, so the formula is the right solution when that rule is available. A high R² here does not establish useful churn prediction. The target is an invented score, not an observed churn event or calibrated probability.
 
-![Actual local dashboard](artifacts/demo.png)
+![Interactive retention scenario dashboard](artifacts/demo.png)
 
-## Problem and users
+## SQL question: how do the cohorts differ?
 
-Explore how an invented customer-risk rule changes with engagement and support-ticket inputs. Intended for recruiters and developers inspecting a small ML dashboard, not for real retention decisions.
+`report.py` loads the same snapshot into an in-memory SQLite database. A CTE, conditional aggregation and a window denominator produce cohort size, customer share, monthly-spend sum and the proportion with synthetic scores of at least 70.
 
-## Features and architecture
+The report reconciles to **300 customers**, a **129,937.14 snapshot spend sum** and **173 high-score rows**. These are fixture totals, not business achievements or recurring revenue. Segment labels are independently generated, so apparent cohort differences do not establish behavioral segments or causal effects.
 
-300 seeded fictional customers → fixed 240/60 train/test split → random forest regressor → interactive scenario controls, cohort plots and held-out evaluation.
+```bash
+python report.py
+python -m pytest test_report.py -q
+```
 
-The target is `clip(100 - engagement + 7.5 * support_tickets, 0, 100)`, rounded to one decimal. It is a score, **not an observed churn label or calibrated probability**. Monthly spend and tenure are unrelated distractor features in the generator. An exact formula baseline scores zero MAE by construction and is more appropriate than ML when the formula is known. Feature importance does not establish causality; changing sliders does not measure intervention impact.
+Tests reconcile counts, sums and threshold totals to the source, then check empty-snapshot and single-cohort denominators. [Query and interpretation](analytics/README.md).
 
-## Setup and usage
+## Run the dashboard
 
-Requires Python 3.12:
+Python 3.12, from the repository root:
 
 ```bash
 python -m venv .venv
+# Windows PowerShell: .venv\Scripts\Activate.ps1
 . .venv/bin/activate
-pip install -r requirements.txt
+pip install -r requirements-dev.txt
 streamlit run myfile.py --browser.gatherUsageStats=false
 ```
 
-Open http://localhost:8501. Use cohort filters and fictional customer sliders. The real entry point is `myfile.py`; no `app.py` or Vercel deployment is implied. No secrets or external data are required.
+Open http://localhost:8501. Change cohort filters and scenario inputs to inspect the model approximation. The application handles empty filter selections. No credentials or external data are required.
 
-## Validation and evaluation
+## Inspect and validate
 
 ```bash
-pip install -r requirements-dev.txt
 python -m pytest -q
 python evaluate.py
 ```
 
-Tests cover seeded data, bounded scores, the exact-formula baseline, mean-baseline comparison, application startup and empty cohort filters. See `artifacts/evaluation.json` for measured MAE/R² and baselines, and `artifacts/demo.png` for the actual running dashboard. GitHub Actions has passed on the published main branch; see the repository Actions tab for the latest run. No latency measurement is claimed.
+- `retention.py`: deterministic generator, model fit and explicit baseline metrics.
+- `myfile.py`: dashboard, cohort charts and scenario controls.
+- `analytics/cohorts.sql` and `report.py`: reproducible reporting workflow.
+- `test_app.py` and `test_report.py`: model, interface and reconciliation checks.
 
-## Data, ownership and limitations
+Feature importance does not establish causality. Moving a slider is a scenario calculation, not a measured intervention. The local app is not a deployed retention system.
 
-All rows are synthetic; no employer, billing or real customer data is used. The original public code had no license; see LICENSE-REVIEW.md before applying one. New changes are prepared for the repository owner. No historical activity, real churn accuracy, revenue growth, business impact or deployment is established.
+## Next evidence gap
 
-## Future improvements
+A real churn study needs a legally usable observed-outcome dataset, a defined prediction date/horizon, customer-separated chronological validation and calibration analysis. An analyst extension should add a data dictionary and a BI report on an attributed public dataset. This project uses no employer, billing or patient records.
 
-Collect a legally usable observed-churn dataset, define a prediction date and horizon, remove post-outcome leakage, use chronological/customer-separated evaluation, assess calibration and subgroup errors, and compare a simple classifier before adding complexity. A SQL reporting exercise can demonstrate analyst skills once the underlying data is credible.
+The original source had no license; [licensing review](LICENSE-REVIEW.md) records that boundary. No license has been imposed on that original work.
 
-## Application summary
+## Other portfolio work
 
-Improved a Streamlit synthetic risk simulator by extracting reproducible model logic, evaluating held-out error against mean and exact-formula baselines, and adding validation for empty filters.
+- [Sentiment classification under domain shift](https://github.com/Abdulllah999/sentiment-baseline-lab): attributed public-data benchmark, predictions and error analysis.
+- [Chronological forecasting](https://github.com/Abdulllah999/market-forecast-lab): persistence baseline and sentiment ablation.
+- [Resume evidence workflow](https://github.com/Abdulllah999/interview-evidence-lab): deterministic text matching for human review.
+- [Synthetic model-serving API](https://github.com/Abdulllah999/health-patterns-demo): validated request contract and educational scope.
 
-## SQL reporting
-
-[SQL cohort analysis](analytics/README.md) adds a CTE, conditional aggregation and window-based cohort shares over the same synthetic snapshot. Run `python report.py`; this is a reproducible SQL example, with no observed churn or revenue claims.
+[GitHub profile](https://github.com/Abdulllah999) · [Role-specific summaries](CAREER-NOTES.md). Older `projects/` snapshots and portfolio branches are retained; the individual repositories contain current implementations.

@@ -1,62 +1,78 @@
-# Abdullah Shakeel
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Abdulllah999/Abdulllah999/main/assets/banner.svg" width="1200" alt="Abdullah Shakeel — Data Science, Artificial Intelligence and Python. Clear questions. Reproducible models. Useful applications." />
+</p>
 
-### Data science & AI · Python applications · Clear, reproducible analysis
+<div align="center">
 
-I’m an IT graduate based in Islamabad, Pakistan, with a focus on Data Science and Artificial Intelligence. I teach Python and machine learning through practical projects, and bring experience working with operational data, dashboards and reporting.
+From raw data to models you can inspect and applications you can use.
 
-My portfolio connects **data → models → usable applications**, with visible baselines, reproducible examples and clear limits on what the results establish.
+<p>
+  <img src="https://raw.githubusercontent.com/Abdulllah999/Abdulllah999/main/assets/python.svg" alt="Python" width="86" height="30" />
+  <img src="https://raw.githubusercontent.com/Abdulllah999/Abdulllah999/main/assets/sql.svg" alt="SQL" width="66" height="30" />
+  <img src="https://raw.githubusercontent.com/Abdulllah999/Abdulllah999/main/assets/machine-learning.svg" alt="Machine Learning" width="159" height="30" />
+  <img src="https://raw.githubusercontent.com/Abdulllah999/Abdulllah999/main/assets/flask.svg" alt="Flask" width="77" height="30" />
+</p>
 
-[Explore my repositories](https://github.com/Abdulllah999?tab=repositories)
+[Selected projects](#selected-projects) &nbsp; / &nbsp; [Technical toolkit](#technical-toolkit) &nbsp; / &nbsp; [Background](#background)
 
-## Featured work
+</div>
 
-| Project | What to inspect | Stack |
-| --- | --- | --- |
-| [Interview Evidence Lab](https://github.com/Abdulllah999/interview-evidence-lab) | Explicit skill evidence and human interview prompts; no automated hiring decisions | Python · Flask · text processing |
-| [Sentiment Baseline Lab](https://github.com/Abdulllah999/sentiment-baseline-lab) | Train-only TF-IDF pipeline, three-class baseline and unknown-vocabulary abstention | Python · Scikit-learn · Pandas |
-| [Market Forecast Lab](https://github.com/Abdulllah999/market-forecast-lab) | Walk-forward evaluation, sentiment ablation and persistence baseline | Python · Flask · time series |
-| [Health Pattern Explorer](https://github.com/Abdulllah999/health-patterns-demo) | Synthetic classification, validated API and educational limits; Flutter companion source | Python · Flask · Scikit-learn · Flutter scaffold |
-| [Retention Command Center](https://github.com/Abdulllah999/AI-Powered-Retention-Command-Center-Churn-Simulator) | Interactive synthetic scenarios and an explicit formula baseline | Streamlit · Plotly · Scikit-learn |
+---
 
-The four lab projects are **new portfolio implementations prepared in November 2026**, inspired by ideas described in my CV. They are not the original university applications. Synthetic and authored fixtures demonstrate software behavior; they do not establish real-world hiring, healthcare, financial or customer outcomes. Each repository documents its scope, actual local output and evaluation method.
+## Data science, with the evidence attached
 
-<details>
-<summary>See the applications</summary>
+I work with **Python, SQL and machine learning** to turn analytical questions into reproducible experiments and usable applications. My background includes operational reporting and billing-data analysis; my current portfolio focuses on NLP, model evaluation and Python interfaces.
 
-**Interview Evidence Lab**
+For each project, I aim to make three things easy to inspect: **the decision, the result and the limitation.**
 
-![Interview evidence demo](https://raw.githubusercontent.com/Abdulllah999/interview-evidence-lab/main/artifacts/demo.png)
+## Selected projects
 
-**Market Forecast Lab**
+### Sentiment classification under domain shift
 
-![Forecasting demo](https://raw.githubusercontent.com/Abdulllah999/market-forecast-lab/main/artifacts/demo.png)
+Can a model trained on product and restaurant reviews transfer to movie reviews? I evaluate a TF-IDF/logistic-regression baseline on an attributed UCI dataset, with source separation, normalized-text deduplication and train-only preprocessing.
 
-</details>
+**Held-out IMDb:** 995 sentences · **0.7022 macro F1** · 70.95% accuracy versus 49.95% for a majority baseline. The full error file is included. This binary benchmark is separate from the authored three-class web example.
+
+[Code](https://github.com/Abdulllah999/sentiment-baseline-lab) · [Evaluation protocol & findings](https://github.com/Abdulllah999/sentiment-baseline-lab/blob/main/docs/benchmark-findings.md) · [Reproducibility tests](https://github.com/Abdulllah999/sentiment-baseline-lab/blob/main/test_benchmark.py)
+
+### Does sentiment improve a next-close forecast?
+
+An expanding-window experiment compares Ridge with and without sentiment against persistence. On 71 synthetic test origins, **persistence has the lowest MAE: 0.7356**, versus 0.9177 for Ridge with sentiment. The result demonstrates why baseline comparison and time-aware validation matter.
+
+[Code & measured comparison](https://github.com/Abdulllah999/market-forecast-lab) · [Every held-out prediction](https://github.com/Abdulllah999/market-forecast-lab/blob/main/artifacts/predictions.csv)
+
+### Retention scenarios & SQL cohort analysis
+
+A Streamlit dashboard paired with a SQLite report using a CTE, conditional aggregation and a window denominator. Tests reconcile cohort counts, spend sums and thresholds to the synthetic source. The model is compared with both a mean baseline and the exact generating formula.
+
+[Dashboard & results](https://github.com/Abdulllah999/AI-Powered-Retention-Command-Center-Churn-Simulator) · [SQL query](https://github.com/Abdulllah999/AI-Powered-Retention-Command-Center-Churn-Simulator/blob/main/analytics/cohorts.sql) · [Reconciliation tests](https://github.com/Abdulllah999/AI-Powered-Retention-Command-Center-Churn-Simulator/blob/main/test_report.py)
+
+**Additional Python work:** [Resume skill evidence](https://github.com/Abdulllah999/interview-evidence-lab), a deterministic Flask workflow for human review; and [synthetic model serving](https://github.com/Abdulllah999/health-patterns-demo), a validated educational API with unvalidated Flutter companion source.
 
 ## Technical toolkit
 
-| Area | Tools |
-| --- | --- |
-| Data & analytics | Python, SQL, Pandas, NumPy, Excel, Power BI, Tableau |
-| Machine learning & NLP | Scikit-learn, TensorFlow, NLTK, text classification, model evaluation |
-| Applications & APIs | Flask, REST APIs, JavaScript, React, Flutter |
-| Databases & development | MySQL, MongoDB, Git, Docker |
+| Demonstrated in this portfolio | Evidence |
+| :--- | :--- |
+| **Python, Pandas, NumPy, Scikit-learn** | Text pipelines, feature engineering, baseline evaluation and public-data benchmarking |
+| **SQL & analytical reporting** | SQLite cohort queries, window functions and reconciliation checks |
+| **Flask, REST APIs, Streamlit, Plotly** | Validated interfaces, model-serving endpoints and interactive dashboards |
+| **Git, pytest, GitHub Actions** | Versioned source, functional tests and automated reproduction |
 
-This toolkit reflects my stated background. The repositories show which tools are demonstrated in the current implementations.
+Additional background: TensorFlow, NLTK, React, Flutter, MySQL, MongoDB, Excel, Power BI, Tableau and Docker. The repositories distinguish implemented features from unvalidated scaffolding.
 
-## Experience
+## Background
 
-**Data Science Trainer · Future Connect Training and Recruitment**  
-Teaching Python, data science and machine learning through practical projects.
+**Virtual Assistant / Data and Billing Analyst · Ezcure MBS**<br>
+October 2023 – May 2025<br>
+Medical billing data, Excel dashboards, reporting and claim tracking.
 
-**Virtual Assistant / Data and Billing Analyst · Ezcure MBS**  
-October 2023 – May 2025 · Worked with medical billing data, Excel dashboards, reporting and claim tracking. No confidential employer or patient data appears in this portfolio.
+**BS Information Technology · Bahria University, Islamabad**<br>
+2021–2025 · Focus: Data Science and Artificial Intelligence · CGPA: **3.43 / 4.00**
 
-## Education
+## Career focus
 
-**BS Information Technology · Bahria University, Islamabad**  
-2021–2025 · Major focus: Data Science and Artificial Intelligence · CGPA: 3.43/4.00
+Seeking **Data Science, Machine Learning and AI** opportunities where I can contribute Python development, analytical reasoning and reproducible evaluation.
 
-## Opportunities
+The lab projects are current portfolio implementations inspired by earlier project ideas. Data provenance, methodology and scope are documented in each repository; no deployment or real-world business outcome is claimed.
 
-Interested in Data Scientist, Machine Learning Engineer, AI Engineer, Python Developer and Data Analyst roles. My strongest current portfolio evidence is in Python prototypes, reproducible ML workflows and analytical applications.
+[Explore all repositories →](https://github.com/Abdulllah999?tab=repositories)

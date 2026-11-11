@@ -42,3 +42,11 @@ All 31 Python tests and five evaluation commands passed again from the consolida
 ## Final publication status
 
 The owner created all five empty public destinations. The connected integration published the profile README in `Abdulllah999` and transferred each original lab commit to the matching repository's `main` branch without rewriting history. Profile project links and screenshots now target those repositories. The portfolio overview and download/setup guides have been updated to remove pending-creation instructions. Profile bio/location, repository descriptions/topics and pins remain website actions because the integration lacks those API capabilities. Project source, documentation, screenshots, tests and evaluation artifacts are public; no deployment is claimed.
+
+## Recruiter review and evidence upgrade
+
+The six repository front pages were reviewed for evidence density, consistency and accuracy. The profile now prioritizes a public-data sentiment benchmark, chronological forecasting and reconciled SQL analysis. Supporting text/API exercises are separated from lead projects. Each project README now gives a concrete question, inspectable implementation, result, limitation and next decision rather than repeated generic sections. The retention README focuses on its own dashboard/SQL work rather than duplicating the whole profile. Stale teaching references were removed from the maintained overview and draft.
+
+The sentiment repository now includes UCI Sentiment Labelled Sentences (verified CC BY 4.0 attribution), fixed Amazon/Yelp-to-IMDb source holdout, normalized-text deduplication, source hashes, full predictions/errors, three additional meaningful tests, and CI artifact reproduction. Raw files retain 3,000 review records; after deduplication there are 1,977 training and 995 test sentences. Binary accuracy is 70.95%, macro F1 0.7022; the training-majority baseline is 49.95% accuracy and 0.3331 macro F1. This is separate from the authored three-class web fixture. No deployment, employment impact or production-generalization claim was added.
+
+Account metadata remains outside the integration's allowed writes; the setup guide gives exact text and revised pin priorities. No verified LinkedIn or intended public contact address was supplied, so none was invented.
