@@ -1,64 +1,15 @@
-# Abdullah Shakeel
+# Abdullah Shakeel · Data Science & AI
 
-> All four labs are published in separate public repositories and featured on [my GitHub profile](https://github.com/Abdulllah999). Each has setup instructions, tests, screenshots and evaluation output. The retention dashboard and SQL report remain in this repository.
+The maintained portfolio front page is [my GitHub profile](https://github.com/Abdulllah999).
 
-### Data science & AI · Python applications · Clear, reproducible analysis
+## Start with the evidence
 
-I’m an IT graduate based in Islamabad, Pakistan, with a focus on Data Science and Artificial Intelligence. I teach Python and machine learning through practical projects, and bring experience working with operational data, dashboards and reporting.
+1. [Sentiment classification under domain shift](https://github.com/Abdulllah999/sentiment-baseline-lab): a public UCI benchmark with 995 held-out IMDb sentences, macro F1 0.7022, reproducible artifacts and full error analysis.
+2. [Chronological forecasting](https://github.com/Abdulllah999/market-forecast-lab): a 71-origin synthetic evaluation where persistence beats the fitted models; every prediction is included.
+3. [SQL cohort analysis and retention scenarios](readme.md): a reconciled SQLite report and an interactive Streamlit dashboard.
 
-My portfolio connects **data → models → usable applications**, with visible baselines, reproducible examples and clear limits on what the results establish.
+Supporting work: [human-reviewed resume skill evidence](https://github.com/Abdulllah999/interview-evidence-lab) and [synthetic classifier API](https://github.com/Abdulllah999/health-patterns-demo).
 
-[Explore my repositories](https://github.com/Abdulllah999?tab=repositories)
+See [role-specific summaries](CAREER-NOTES.md) for application wording and [profile settings](GITHUB-SETUP.md) for bio, repository descriptions and pins.
 
-## Featured work
-
-| Project | What to inspect | Stack |
-| --- | --- | --- |
-| [Interview Evidence Lab](https://github.com/Abdulllah999/interview-evidence-lab) | Explicit skill evidence and human interview prompts; no automated hiring decisions | Python · Flask · text processing |
-| [Sentiment Baseline Lab](https://github.com/Abdulllah999/sentiment-baseline-lab) | Train-only TF-IDF pipeline, three-class baseline and unknown-vocabulary abstention | Python · Scikit-learn · Pandas |
-| [Market Forecast Lab](https://github.com/Abdulllah999/market-forecast-lab) | Walk-forward evaluation, sentiment ablation and persistence baseline | Python · Flask · time series |
-| [Health Pattern Explorer](https://github.com/Abdulllah999/health-patterns-demo) | Synthetic classification, validated API and educational limits; Flutter companion source | Python · Flask · Scikit-learn · Flutter scaffold |
-| [Retention Command Center](https://github.com/Abdulllah999/AI-Powered-Retention-Command-Center-Churn-Simulator) | Interactive synthetic scenarios and an explicit formula baseline | Streamlit · Plotly · Scikit-learn |
-
-The four lab projects are **new portfolio implementations prepared in November 2026**, inspired by ideas described in my CV. They are not the original university applications. Synthetic and authored fixtures demonstrate software behavior; they do not establish real-world hiring, healthcare, financial or customer outcomes. Each repository documents its scope, actual local output and evaluation method.
-
-<details>
-<summary>See the applications</summary>
-
-**Interview Evidence Lab**
-
-![Interview evidence demo](https://raw.githubusercontent.com/Abdulllah999/interview-evidence-lab/main/artifacts/demo.png)
-
-**Market Forecast Lab**
-
-![Forecasting demo](https://raw.githubusercontent.com/Abdulllah999/market-forecast-lab/main/artifacts/demo.png)
-
-</details>
-
-## Technical toolkit
-
-| Area | Tools |
-| --- | --- |
-| Data & analytics | Python, SQL, Pandas, NumPy, Excel, Power BI, Tableau |
-| Machine learning & NLP | Scikit-learn, TensorFlow, NLTK, text classification, model evaluation |
-| Applications & APIs | Flask, REST APIs, JavaScript, React, Flutter |
-| Databases & development | MySQL, MongoDB, Git, Docker |
-
-This toolkit reflects my stated background. The repositories show which tools are demonstrated in the current implementations.
-
-## Experience
-
-**Data Science Trainer · Future Connect Training and Recruitment**  
-Teaching Python, data science and machine learning through practical projects.
-
-**Virtual Assistant / Data and Billing Analyst · Ezcure MBS**  
-October 2023 – May 2025 · Worked with medical billing data, Excel dashboards, reporting and claim tracking. No confidential employer or patient data appears in this portfolio.
-
-## Education
-
-**BS Information Technology · Bahria University, Islamabad**  
-2021–2025 · Major focus: Data Science and Artificial Intelligence · CGPA: 3.43/4.00
-
-## Opportunities
-
-Interested in Data Scientist, Machine Learning Engineer, AI Engineer, Python Developer and Data Analyst roles. My strongest current portfolio evidence is in Python prototypes, reproducible ML workflows and analytical applications.
+These are current portfolio implementations. Each project documents data provenance, scope and limitations; no employment impact, clinical validity, trading result or deployment is implied.
