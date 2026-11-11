@@ -1,0 +1,28 @@
+{
+  "method": "Fixed authored holdout: 24 train / 9 test; vocabulary fitted only on train. Shared phrasing makes this a smoke evaluation, not Twitter validation.",
+  "accuracy": 1.0,
+  "macro_f1": 1.0,
+  "baseline_accuracy": 0.3333333333333333,
+  "label_order": [
+    "negative",
+    "neutral",
+    "positive"
+  ],
+  "confusion_matrix": [
+    [
+      3,
+      0,
+      0
+    ],
+    [
+      0,
+      3,
+      0
+    ],
+    [
+      0,
+      0,
+      3
+    ]
+  ]
+}

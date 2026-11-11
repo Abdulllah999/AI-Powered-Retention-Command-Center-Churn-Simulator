@@ -1,3 +1,7 @@
+> **Latest:** The complete Python portfolio is available in the default-branch `projects/` folders and linked from the repository front page. Consolidated validation: 31 tests plus five evaluation commands passed. Separate repositories/profile settings remain blocked by GitHub integration permissions. Historical validation notes below describe earlier checks.
+
+> **Current access:** All four complete projects are also in [`projects/`](projects) on the default branch. The original branch downloads below remain available. The owner selected these implementations; no original CV source was supplied.
+
 # Project source downloads and publication
 
 All four new implementations are fully available as source, not just README drafts. These ZIPs include application code, pinned direct dependencies, example data, tests, CI configuration, local screenshots and evaluation output.

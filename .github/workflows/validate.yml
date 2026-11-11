@@ -1,8 +1,22 @@
 name: Validate
 on: [push, pull_request]
+permissions:
+  contents: read
 jobs:
   test:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        project:
+          - .
+          - projects/interview-evidence-lab
+          - projects/sentiment-baseline-lab
+          - projects/health-patterns-demo
+          - projects/market-forecast-lab
+    defaults:
+      run:
+        working-directory: ${{ matrix.project }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

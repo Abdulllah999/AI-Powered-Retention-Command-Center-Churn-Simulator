@@ -1,6 +1,22 @@
-[Complete project source downloads and automatic publication →](COMPLETE-PROJECT-DOWNLOADS.md)
+# Abdullah Shakeel · Data science & AI portfolio
 
-[Explore Abdullah Shakeel’s data science & AI portfolio →](PORTFOLIO.md)
+I build Python applications that connect data, models and usable interfaces, with reproducible examples and explicit evaluation limits. Based in Islamabad, Pakistan; BS Information Technology, Bahria University (2021–2025), with a focus on Data Science and AI.
+
+[Profile, experience and skills](PORTFOLIO.md) · [Application summaries by role](CAREER-NOTES.md) · [Audit and validation](PORTFOLIO-AUDIT.md)
+
+| Project | Evidence to inspect | Start here |
+| --- | --- | --- |
+| Interview Evidence Lab | Deterministic skill matching, human review, Flask validation | [Code and demo](projects/interview-evidence-lab) |
+| Sentiment Baseline Lab | Train-only TF-IDF, three classes, authored holdout and abstention | [Code and evaluation](projects/sentiment-baseline-lab) |
+| Market Forecast Lab | Chronological evaluation, sentiment ablation, persistence baseline | [Code and evaluation](projects/market-forecast-lab) |
+| Health Pattern Explorer | Synthetic model-serving API, educational limits, Flutter companion source | [Code and demo](projects/health-patterns-demo) |
+| Retention Command Center | Streamlit scenarios, exact-formula baseline and SQL reconciliation | [Dashboard details below](#retention-command-center--churn-simulator) · [SQL report](analytics/README.md) |
+
+The four labs are new portfolio implementations inspired by CV project ideas, not recovered university applications. Each folder is independently runnable: open its README, change into that folder, then install its requirements. Evaluation data is authored or synthetic; the results do not establish real-world outcomes. Flutter and Docker builds are not validated. No application deployment is claimed.
+
+GitHub Actions validates the five Python applications separately. Original project branches are preserved. [Separate-repository publication instructions](GITHUB-SETUP.md) remain available while account-level creation is restricted.
+
+---
 
 # Retention Command Center & Churn Simulator
 
