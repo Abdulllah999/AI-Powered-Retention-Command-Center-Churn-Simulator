@@ -1,0 +1,5 @@
+segment,customers,customer_share_pct,monthly_spend_sum,mean_synthetic_risk,high_score_customers,high_score_pct
+Hibernating,29,9.67,10384.5,73.75,18,62.07
+At Risk,62,20.67,25195.86,72.83,35,56.45
+Champions,95,31.67,43724.97,72.53,59,62.11
+Loyalists,114,38.0,50631.81,67.19,61,53.51
