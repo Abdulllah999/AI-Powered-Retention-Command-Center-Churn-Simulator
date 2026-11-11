@@ -6,15 +6,15 @@ I build Python applications that connect data, models and usable interfaces, wit
 
 | Project | Evidence to inspect | Start here |
 | --- | --- | --- |
-| Interview Evidence Lab | Deterministic skill matching, human review, Flask validation | [Code and demo](projects/interview-evidence-lab) |
-| Sentiment Baseline Lab | Train-only TF-IDF, three classes, authored holdout and abstention | [Code and evaluation](projects/sentiment-baseline-lab) |
-| Market Forecast Lab | Chronological evaluation, sentiment ablation, persistence baseline | [Code and evaluation](projects/market-forecast-lab) |
-| Health Pattern Explorer | Synthetic model-serving API, educational limits, Flutter companion source | [Code and demo](projects/health-patterns-demo) |
+| Interview Evidence Lab | Deterministic skill matching, human review, Flask validation | [Code and demo](https://github.com/Abdulllah999/interview-evidence-lab) |
+| Sentiment Baseline Lab | Train-only TF-IDF, three classes, authored holdout and abstention | [Code and evaluation](https://github.com/Abdulllah999/sentiment-baseline-lab) |
+| Market Forecast Lab | Chronological evaluation, sentiment ablation, persistence baseline | [Code and evaluation](https://github.com/Abdulllah999/market-forecast-lab) |
+| Health Pattern Explorer | Synthetic model-serving API, educational limits, Flutter companion source | [Code and demo](https://github.com/Abdulllah999/health-patterns-demo) |
 | Retention Command Center | Streamlit scenarios, exact-formula baseline and SQL reconciliation | [Dashboard details below](#retention-command-center--churn-simulator) · [SQL report](analytics/README.md) |
 
-The four labs are new portfolio implementations inspired by CV project ideas, not recovered university applications. Each folder is independently runnable: open its README, change into that folder, then install its requirements. Evaluation data is authored or synthetic; the results do not establish real-world outcomes. Flutter and Docker builds are not validated. No application deployment is claimed.
+The four labs are new portfolio implementations inspired by CV project ideas, not recovered university applications. Each project is independently runnable: open its repository README, clone it, then install its requirements. Evaluation data is authored or synthetic; the results do not establish real-world outcomes. Flutter and Docker builds are not validated. No application deployment is claimed.
 
-GitHub Actions validates the five Python applications separately. Original project branches are preserved. [Separate-repository publication instructions](GITHUB-SETUP.md) remain available while account-level creation is restricted.
+All four labs are published in separate repositories and featured on [my profile](https://github.com/Abdulllah999). GitHub Actions validates the Python applications. Original branches and default-branch project snapshots are preserved; use the linked individual repositories for current project work. [Profile settings and recommended pins](GITHUB-SETUP.md).
 
 ---
 

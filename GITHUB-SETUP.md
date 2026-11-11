@@ -1,34 +1,18 @@
-> **Latest:** The complete Python portfolio is available in the default-branch `projects/` folders and linked from the repository front page. Consolidated validation: 31 tests plus five evaluation commands passed. Separate repositories/profile settings remain blocked by GitHub integration permissions. Historical validation notes below describe earlier checks.
+# Portfolio publication and profile settings
 
-**Updated:** CLI authorization was granted, but effective API requests remain restricted in this workspace. See [complete downloads and automatic local publication](COMPLETE-PROJECT-DOWNLOADS.md) for the current resolution.
+All five new repositories now exist and have been populated: the special profile repository `Abdulllah999` and the four project repositories listed below. The owner created the empty repositories; the connected integration transferred the existing project commits and published the profile README. No further repository creation or login is needed for the prepared portfolio.
 
-# Finish the GitHub profile setup
+## Remaining account settings
 
-The connected integration can push code and manage pull requests, but GitHub denied repository creation, repository descriptions/topics and profile settings with HTTP 403 / “Resource not accessible by integration”. No account permission was changed.
+GitHub denied API writes to profile settings and repository descriptions/topics with HTTP 403 “Resource not accessible by integration”. These settings have not been applied. Set them through the GitHub website if desired.
 
-## Create five empty public repositories
-
-Use https://github.com/new under owner **Abdulllah999**. Leave README, .gitignore and license initialization unchecked. Create:
-
-1. `interview-evidence-lab`
-2. `sentiment-baseline-lab`
-3. `health-patterns-demo`
-4. `market-forecast-lab`
-5. `Abdulllah999`
-
-If the ChatGPT GitHub app is configured for selected repositories, grant it access to these new repositories in https://github.com/settings/installations. No passwords or tokens belong in chat. Return to the conversation after creation; the source is already pushed to the `portfolio/<project-name>` branches and can be moved to the corresponding main branches without generating fake history.
-
-The `Abdulllah999` repository is special: its root README.md becomes the account's profile front page. PROFILE-README-DRAFT.md contains the prepared content for that repository, including target links that will work after the four project repositories exist. Until then, PORTFOLIO.md is the working overview with branch links.
-
-## Profile settings
-
-At https://github.com/settings/profile set:
+At https://github.com/settings/profile use:
 
 - Name: Abdullah Shakeel
 - Location: Islamabad, Pakistan
 - Bio: Data science & AI | Python, SQL & ML | Building reproducible models and useful data applications | Islamabad, Pakistan
 
-Leave website, LinkedIn and public email blank unless you choose to supply verified links or an address.
+No LinkedIn, website or public email is added without a verified intended professional link.
 
 ## Repository metadata
 
@@ -42,10 +26,12 @@ Leave website, LinkedIn and public email blank unless you choose to supply verif
 
 Set description/topics with the gear beside **About** on each repository page. These API updates were denied; they have not been applied automatically.
 
-## Pins
+## Recommended pins
 
-On https://github.com/Abdulllah999 select **Customize your pins**. After the new repositories are populated, choose Interview Evidence, Market Forecast, Sentiment Baseline, Retention, then Health Patterns. Keep the main profile centered on Python/data science/AI; do not pad repository count with unfinished projects.
+On https://github.com/Abdulllah999 choose **Customize your pins**, then select `interview-evidence-lab`, `market-forecast-lab`, `sentiment-baseline-lab`, `AI-Powered-Retention-Command-Center-Churn-Simulator`, and `health-patterns-demo`.
 
-## Validation status
+For repository descriptions and topics, use the gear beside **About** on each repository page. These are metadata changes; all project source and profile content are already public.
 
-Local Python checks: 24 passing tests. All five Python web interfaces were rendered in Chromium at desktop and mobile widths. Flutter companion and Docker recipes are not validated builds. Authored/synthetic data results are not real-world model-performance claims. Check each branch's Actions workflow for the latest remote result.
+## Technical validation
+
+31 local Python tests and all five evaluation commands passed during preparation. Each individual project has its own GitHub Actions validation workflow. Synthetic/authored evaluation results do not establish real-world model performance. Flutter and Docker builds remain unvalidated; applications are not deployed.
