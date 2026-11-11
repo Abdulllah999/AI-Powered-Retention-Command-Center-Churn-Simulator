@@ -12,7 +12,7 @@ At https://github.com/settings/profile use:
 - Location: Islamabad, Pakistan
 - Bio: Data science & AI | Python, SQL & ML | Building reproducible models and useful data applications | Islamabad, Pakistan
 
-No LinkedIn, website or public email is added without a verified intended professional link.
+Recruiter contact supplied by the owner: [LinkedIn](https://www.linkedin.com/in/abdullah-shakeel-26aabb265/). This link is published on the profile README. Add it to the GitHub profile social links through the website settings if desired. No public email was supplied.
 
 ## Repository metadata
 
